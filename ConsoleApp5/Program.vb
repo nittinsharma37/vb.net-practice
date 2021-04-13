@@ -128,8 +128,12 @@ Public Class Rect
 
     'class methods 
     Public Function AcceptDetails()
-        length = 4.5
-        width = 6.7
+        Console.WriteLine("Enter the length and width of a rectangle ")
+
+        'Parsing values here
+
+        length = Convert.ToDouble(Console.ReadLine)
+        width = Double.Parse(Console.ReadLine())
         Return 0
 
     End Function
