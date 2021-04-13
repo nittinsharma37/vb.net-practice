@@ -110,42 +110,27 @@ Module CustomModule
         r1.AcceptDetails()
         r1.Display()
 
-
+        Dim msgReturn As New MsgRW()
+        msgReturn.MsgRead()
+        msgReturn.MsgWrite()
 
         Console.ReadLine()
-
-
-
 
     End Sub
 
 End Module
 
-Public Class Rect
-    'class variables
-    Private length As Double
-    Private width As Double
 
-    'class methods 
-    Public Function AcceptDetails()
-        Console.WriteLine("Enter the length and width of a rectangle ")
 
-        'Parsing values here
-
-        length = Convert.ToDouble(Console.ReadLine)
-        width = Double.Parse(Console.ReadLine())
+Public Class MsgRW
+    Dim msg As String
+    Public Function MsgRead()
+        Console.WriteLine("Enter your message : ")
+        msg = Console.ReadLine().ToString
         Return 0
-
     End Function
-
-    Public Function GetDetails()
-        Return length * width
-    End Function
-    Public Function Display()
-        Console.WriteLine("Length of rectangle : {0}", length)
-        Console.WriteLine("Width of a rectangle : {0}", width)
-        Console.WriteLine("Area of recatangle : {0}", GetDetails())
-
+    Public Function MsgWrite()
+        Console.WriteLine("Your  message : {0}", msg)
         Return 0
     End Function
 End Class
