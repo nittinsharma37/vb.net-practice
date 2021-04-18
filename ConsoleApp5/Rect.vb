@@ -8,9 +8,7 @@ Public Class Rect
     'class methods 
     Public Function AcceptDetails()
         Console.WriteLine("Enter the length and width of a rectangle ")
-
         'Parsing values here
-
         length = Convert.ToDouble(Console.ReadLine)
         width = Double.Parse(Console.ReadLine())
         Return 0

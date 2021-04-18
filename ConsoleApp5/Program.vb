@@ -106,15 +106,41 @@ Module CustomModule
 
         'Console.WriteLine("hello there a new begining in  the world of visual basic and .net framework.")
 
-        Dim r1 As New Rect()
-        r1.AcceptDetails()
-        r1.Display()
+        '        Dim r1 As New Rect()
+        '#Const age = True
 
-        Dim msgReturn As New MsgRW()
-        msgReturn.MsgRead()
-        msgReturn.MsgWrite()
+        '#If age Then
 
-        Console.ReadLine()
+        '        Console.WriteLine("You are welcome to the Robotics Club")
+        '#End If
+        '        Console.ReadKey()
+        '        r1.AcceptDetails()
+        '        r1.Display()
+
+        '        Dim msgReturn As New MsgRW()
+        '        msgReturn.MsgRead()
+        '        msgReturn.MsgWrite()
+
+        '        Console.ReadLine()
+
+
+        '******************************************************************************************************
+
+
+
+        '******************************operators here**********************************************************
+
+
+        Dim a, b, res As Integer
+        a = 2
+        b = 5
+
+        res = b ^ a
+
+        Console.WriteLine(res)
+
+
+
 
     End Sub
 
@@ -122,15 +148,4 @@ End Module
 
 
 
-Public Class MsgRW
-    Dim msg As String
-    Public Function MsgRead()
-        Console.WriteLine("Enter your message : ")
-        msg = Console.ReadLine().ToString
-        Return 0
-    End Function
-    Public Function MsgWrite()
-        Console.WriteLine("Your  message : {0}", msg)
-        Return 0
-    End Function
-End Class
+
