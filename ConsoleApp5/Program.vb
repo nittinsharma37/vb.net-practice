@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 
 Module CustomModule
     Sub Main()
@@ -131,18 +131,183 @@ Module CustomModule
         '******************************operators here**********************************************************
 
 
-        Dim a, b, res As Integer
-        a = 2
-        b = 5
+        'Dim a, b As Integer
+        'Dim res As Single
+        'Dim compa As Boolean
+        'a = 2
+        'b = 7
+        '***************************Arthimetic operators ****************************************************
+        'res = b ^ a
+        'res = a + b
+        'res = b / a this sign will return division in floating point 
+        'res = b \ a this will return in integer 
+        'res = b Mod a this will Return modulus 
 
-        res = b ^ a
+        '**********************comparison op*************************
 
-        Console.WriteLine(res)
+        'compa = (a = b) for equals to value 
+
+        'compa = a <> b  returns true if they are not equal
+
+        'compa = a < b
+        'Console.WriteLine(compa)
+        'compa = a > b
+        'Console.WriteLine(compa)
+        'compa = a <= b
+        'Console.WriteLine(compa)
+        'compa = a >= b
+        'Console.WriteLine(compa)
+
+        'Console.WriteLine(compa)
 
 
+        'Dim x As Integer = 5
+        'Dim y As Integer = 10
+        'Dim Result, obj, obj2 As Object
+        'Dim str, str2 As String
+        'str = "Apple12345"
+        'str2 = "Apple12345"
+        'obj = 10
+        'obj2 = 20
+
+        'Console.WriteLine(" Program of Comparison Operator")
+        ''Use of > Operator  
+        'Console.WriteLine(" Output of x > y is {0}", x > y)
+
+        ''Use of < Operator  
+        'Console.WriteLine(" Output of x < y is {0}", x < y)
+
+        ''Use of = Operator  
+        'Console.WriteLine(" Output of x = y is {0}", x = y)
+
+        ''Use of <> Operator  
+        'Console.WriteLine(" Output of x <> y is {0}", x <> y)
+
+        ''Use of >= Operator  
+        'Console.WriteLine(" Output of x >= y is {0}", x >= y)
+
+        ''Use of <= Operator  
+        'Console.WriteLine(" Output of x <= y is {0}", x <= y)
+
+        ''Use of Is Operator  
+        'Result = obj Is obj2
+        'Console.WriteLine(" Output of obj Is obj2 is {0}", Result)
+
+        ''Use of Is Operator  
+        'Result = obj IsNot obj2
+        'Console.WriteLine(" Output of obj IsNot obj2 is {0}", Result)
+
+        ''Use of Like Operator  
+        'Result = str Like str2
+        'Console.WriteLine(" Output of str Like str2 is {0}", Result)
 
 
+        '*******************************-- Logical --*****************************
+
+
+        'Dim a As Boolean = True
+        'Dim b As Boolean = False
+        'Dim c, d As Integer
+        'c = 10
+        'd = 20
+
+        ''Use of And Operator  
+        'If a And b Then
+        '    Console.WriteLine(" Operands A And B are True")
+        'End If
+
+        ''Use of Or Operator  
+        'If a Or b Then
+        '    Console.WriteLine(" Operands A Or B are True")
+        'End If
+
+        ''Use of Xor Operator  
+        'If a Xor b Then
+        '    Console.WriteLine(" Operands A Xor B is True")
+        'End If
+
+        ''Use of And Operator  
+        'If c And d Then
+        '    Console.WriteLine(" Operands c And d is True")
+        'End If
+
+        ''Use of Or Operator  
+        'If c Or d Then
+        '    Console.WriteLine(" Operands c Or d is True")
+        'End If
+
+        ''Use of AndAlso Operator  
+        'If a AndAlso b Then
+        '    Console.WriteLine(" Operand A AndAlso B is True")
+        'End If
+
+        ''Use of OrElse Operator  
+        'If a OrElse b Then
+        '    Console.WriteLine(" Operand A OrElse B is True")
+        'End If
+
+        ''Use of Not Operator  
+        'If Not (a And b) Then
+        '    Console.WriteLine(" Output of Not (A And B) is True")
+        'End If
+
+        '*******************************-- Asignment op --****************************************
+
+        'Dim A As Integer = 5
+        'Dim B As Integer
+        'Dim Str, name As String
+        'name = "come"
+        'Str = "Wel"
+
+        ''Use of = Operator  
+        'B = A
+        'Console.WriteLine(" Assign value A to B is {0}", B)
+
+        ''Use of += Operator  
+        'B += A
+        'Console.WriteLine(" Output of B += A is {0}", B)
+
+        ''Use of -= Operator  
+        'B -= A
+        'Console.WriteLine(" Output of B -= A is {0}", B)
+
+        ''Use of *= Operator  
+        'B *= A
+        'Console.WriteLine(" Output of B *= A is {0}", B)
+
+        ''Use of /= Operator  
+        'B /= A
+        'Console.WriteLine(" Output of B /= A is {0}", B)
+
+        ''Use of = Operator  
+        'B \= A
+        'Console.WriteLine(" Output of B \= A is {0}", B)
+
+        ''Use of ^= Operator  
+        'B ^= A
+        'Console.WriteLine(" Output of B ^= A is {0}", B)
+
+        ''Use of &= Operator  
+        'Str &= name
+        'Console.WriteLine(" Output of Str &= name is {0}", Str)
+
+        '****************-- String concatination --*************************
+
+        'Dim str As String = " All we "
+        'Dim str2 As String = " have to learn "
+        'Dim str3 As String = " "
+        'Dim str4 As String = " is code. "
+        'Dim result As String
+        'Dim result2 As String
+        'result = str & str2
+        'Console.WriteLine(" Result = str & str2 gives = {0}", result)
+        'result2 = str + str2 + str3 + str4
+        'Console.WriteLine(" Result = str + str2 + str3 +str4 gives = {0}", result2.ToString)
+
+
+        Console.ReadLine()
     End Sub
+
 
 End Module
 
