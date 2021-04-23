@@ -303,8 +303,90 @@ Module CustomModule
         'Console.WriteLine(" Result = str & str2 gives = {0}", result)
         'result2 = str + str2 + str3 + str4
         'Console.WriteLine(" Result = str + str2 + str3 +str4 gives = {0}", result2.ToString)
+        'Decision()
+        'temperature(20)
+        'ForLoop()
+        CollHash()
+        Console.ReadLine()
+    End Sub
+
+    Public Sub CollHash()
+        Dim ht As Hashtable = New Hashtable()
+        Dim k As String
+        ht.Add("001", "Zara Ali")
+        ht.Add("002", "Abida Rehman")
+        ht.Add("003", "Joe Holzner")
+        ht.Add("004", "Mausam Benazir Nur")
 
 
+        If (ht.ContainsValue("Nuha Ali")) Then
+            Console.WriteLine("This student name is already in the list")
+        Else
+            ht.Add("005", "Nuha Ali")
+        End If
+        ' Get a collection of the keys. 
+        Dim key As ICollection = ht.Keys
+
+        For Each k In key
+            Console.WriteLine(" {0} : {1}", k, ht(k))
+        Next k
+        Console.ReadKey()
+    End Sub
+
+
+
+
+    Public Sub ForLoop()
+        Dim anArray() As Integer = {1, 3, 5, 7, 9}
+        Dim arrayItem As Integer
+        'displaying the values
+
+        For Each arrayItem In anArray
+            Console.WriteLine(arrayItem)
+        Next
+        Console.ReadLine()
+    End Sub
+
+    Sub temperature(ByVal temp)
+
+        Dim tempFromUser As Integer = temp
+
+        Convert.ToInt32(tempFromUser)
+        Console.WriteLine("temperature : {0}", tempFromUser)
+
+
+        Select Case tempFromUser
+            Case Is < 0
+                Console.WriteLine("its cold !")
+            Case Is < 18
+                Console.WriteLine("its getting acceptable !")
+            Case Is < 25
+                Console.WriteLine("its comfortable !")
+            Case Is < 35
+                Console.WriteLine("its getting hot !")
+            Case Is < 40
+                Console.WriteLine("its burning 😁")
+
+            Case Else
+                Console.WriteLine("its not possible !")
+        End Select
+
+
+
+
+    End Sub
+
+
+    Sub Decision()
+        'local variable definition 
+        Dim a As Integer = 10
+
+        ' check the boolean condition using if statement 
+        If (a < 20) Then
+            ' if condition is true then print the following 
+            Console.WriteLine("a is less than 20")
+        End If
+        Console.WriteLine("value of a is : {0}", a)
         Console.ReadLine()
     End Sub
 
