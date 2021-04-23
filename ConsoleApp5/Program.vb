@@ -1,4 +1,5 @@
 ﻿Imports System
+Imports System.IO
 
 Module CustomModule
     Sub Main()
@@ -306,9 +307,80 @@ Module CustomModule
         'Decision()
         'temperature(20)
         'ForLoop()
-        CollHash()
+        'CollHash()
+
+        'Dim r1 As Rect = New Rect()
+
+        'r1.AcceptDetails()
+        'r1.Display()
+
+        'Division(25, 0)
+
+        FileRW()
+
+
         Console.ReadLine()
+
+
+
     End Sub
+
+
+    Public Function FileRW()
+
+        Dim disp As String() = New String() {"hi there..", "this is written to file..",
+            "using file operation stream writer in text file 😁😁"}
+        Dim s As String
+        Using sw As StreamWriter = New StreamWriter("./out/outdisplay.txt")
+            For Each s In disp
+                sw.WriteLine(s)
+            Next s
+        End Using
+        ' Read and show each line from the file. 
+        Dim line As String
+        Using sr As StreamReader = New StreamReader("./out/outdisplay.txt")
+            line = sr.ReadLine()
+            While (line <> Nothing)
+                Console.WriteLine(line)
+                line = sr.ReadLine()
+            End While
+        End Using
+        Console.ReadKey()
+
+
+
+        'Dim f1 As FileStream = New FileStream("sample.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite)
+        'Dim i As Integer
+
+        'For i = 0 To 20
+        '    f1.WriteByte(CByte(i))
+        'Next i
+        'f1.Position = 0
+
+        'For i = 0 To 20
+        '    Console.Write("{0} ", f1.ReadByte())
+        'Next i
+        'f1.Close()
+        'Console.ReadKey()
+    End Function
+
+
+
+
+
+    Public Function Division(ByVal num1 As Integer, ByVal num2 As Integer)
+        Dim result As Integer
+        Try
+            result = num1 \ num2
+        Catch e As DivideByZeroException
+            Console.WriteLine("Exception caught: {0}", e)
+        Finally
+            Console.WriteLine("Result: {0}", result)
+        End Try
+    End Function
+
+
+
 
     Public Sub CollHash()
         Dim ht As Hashtable = New Hashtable()
