@@ -316,13 +316,26 @@ Module CustomModule
 
         'Division(25, 0)
 
-        FileRW()
+        'FileRW()
+        DOB()
 
 
         Console.ReadLine()
 
 
 
+    End Sub
+
+
+
+    Sub DOB()
+        Console.WriteLine(" Enter Your Date of Birth in DD/MM/YYYY format")
+        Dim dateOfBirth As DateTime
+        dateOfBirth = Console.ReadLine()
+        Dim age As TimeSpan = DateTime.Today - dateOfBirth
+
+        Console.WriteLine(" Currently, You are {0} years old", Math.Floor(age.Days / 365.255))
+        Console.WriteLine(" And You are {0} days or {1} hours old", age.TotalDays, age.TotalHours)
     End Sub
 
 
